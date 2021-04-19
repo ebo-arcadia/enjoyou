@@ -7,12 +7,24 @@ export default function App() {
       <div>
         <nav>
           <ul>
-            <li> <Link to="/">Home</Link> </li>
-            <li> <Link to="/about">About</Link> </li>
-            <li> <Link to="/users">Users</Link> </li>
-            <li> <Link to="/books">Books</Link> </li>
-            <li> <Link to="/bestseller">Best Seller</Link> </li>
-            <li> <Link to="/reviews">Reviews</Link> </li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+            <li>
+              <Link to="/books">Books</Link>
+            </li>
+            <li>
+              <Link to="/bestseller">Best Seller</Link>
+            </li>
+            <li>
+              <Link to="/reviews">Reviews</Link>
+            </li>
           </ul>
         </nav>
 
@@ -31,9 +43,18 @@ export default function App() {
   );
 }
 
-function Home()        { return <h2>Home</h2> }
-function About()       { return <h2>About</h2> }
-function Users()       { return <h2>Users</h2> }
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Users() {
+  return <h2>Users</h2>;
+}
+
 function Books()       { return <h2>Books</h2> }
 function Bestseller()  { return <h2>Best Seller</h2> }
-function Reviews()     { return <h2>Reviews</h2> }
+function Reviews()  { return <h2>Reviews</h2> }
