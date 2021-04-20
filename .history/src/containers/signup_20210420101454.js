@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col, Button, Alert, Breadcrumb, Card, Form } from 'react-bootstrap';
 
 const Signup = () => {
     return (
@@ -45,7 +44,7 @@ const Signup = () => {
                         <Breadcrumb.Item active>Tavb 3</Breadcrumb.Item>
                     </Breadcrumb>
 
-                    <Button variant="primary">Sign up</Button>
+                    <Button variant="primary">Bootstrap Imported Button</Button>
                     <Alert variant="success">This is an alert</Alert>
 
                 </Container>
