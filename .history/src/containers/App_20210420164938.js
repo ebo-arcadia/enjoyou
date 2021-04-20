@@ -17,7 +17,7 @@ export default function App() {
     <React.Fragment>
       <Router>
         <div>
-          <NavigationBar />
+          <NavBar />
           <nav>
             <Breadcrumb>
               <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>

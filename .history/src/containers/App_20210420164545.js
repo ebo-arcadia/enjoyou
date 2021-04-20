@@ -10,14 +10,14 @@ import Projects from '../containers/Projects';
 import Video from '../containers/Video';
 import About from '../components/About'
 import { Breadcrumb } from 'react-bootstrap';
-import NavigationBar from '../components/NavigationBar';
+import NavBar from '../components/NavBar';
 
 export default function App() {
   return (
     <React.Fragment>
       <Router>
         <div>
-          <NavigationBar />
+          <NavBar />
           <nav>
             <Breadcrumb>
               <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
