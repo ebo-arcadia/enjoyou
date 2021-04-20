@@ -9,24 +9,25 @@ import Blog from '../containers/Blog';
 import Projects from '../containers/Projects';
 import Video from '../containers/Video';
 import About from '../components/About'
-import { Breadcrumb } from "react-bootstrap";
+import Layout from '../components/Layout'
 
 export default function App() {
   return (
     <React.Fragment>
+      <Layout>
       <Router>
         <div>
           <nav>
-            <Breadcrumb>
-              <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/books">Books</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/login">Login</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/signup">Signup</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/blog">Blog</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/projects">Projects</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/video">Video</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/about">About</Link></Breadcrumb.Item>
-            </Breadcrumb>
+            <ul>
+              <li> <Link to="/">Home</Link> </li>
+              <li> <Link to="/books">Books</Link> </li>
+              <li> <Link to="/login">Login</Link> </li>
+              <li> <Link to="/signup">Signup</Link> </li>
+              <li> <Link to="/blog">Blog</Link> </li>
+              <li> <Link to="/projects">Projects</Link> </li>
+              <li> <Link to="/video">Video</Link> </li>
+              <li> <Link to="/about">About</Link> </li>
+            </ul>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and
@@ -44,6 +45,7 @@ export default function App() {
           </Switch>
         </div>
       </Router>
+      </Layout>
     </React.Fragment>
   );
 }

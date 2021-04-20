@@ -19,13 +19,13 @@ export default function App() {
           <nav>
             <Breadcrumb>
               <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/books">Books</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/login">Login</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/signup">Signup</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/blog">Blog</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/projects">Projects</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/video">Video</Link></Breadcrumb.Item>
-              <Breadcrumb.Item><Link to="/about">About</Link></Breadcrumb.Item>
+              <li> <Link to="/books">Books</Link> </li>
+              <li> <Link to="/login">Login</Link> </li>
+              <li> <Link to="/signup">Signup</Link> </li>
+              <li> <Link to="/blog">Blog</Link> </li>
+              <li> <Link to="/projects">Projects</Link> </li>
+              <li> <Link to="/video">Video</Link> </li>
+              <li> <Link to="/about">About</Link> </li>
             </Breadcrumb>
           </nav>
 
