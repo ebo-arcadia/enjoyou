@@ -1,8 +1,12 @@
 import React from "react";
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Alert, Breadcrumb, Card } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function App() {
   return (
+    <div>
     <Router>
       <div>
         <nav>
@@ -28,6 +32,24 @@ export default function App() {
         </Switch>
       </div>
     </Router>
+    <header>
+      <Card className="App-header" style={{ color: "#000"}}>
+        <Card.Img src="http://picsum.photos/200/100" />
+        <Card.Body>
+          <Card.Title>Card Title</Card.Title>
+          <Card.Text>This is a card text</Card.Text>
+        </Card.Body>
+      </Card>
+      
+      <Breadcrumb>
+        <Breadcrumb.Item>Tab 1</Breadcrumb.Item>
+        <Breadcrumb.Item>Tab 2</Breadcrumb.Item>
+        <Breadcrumb.Item active>Tavb 3</Breadcrumb.Item>
+      </Breadcrumb>
+      <Button variant="primary">Bootstrap Imported Button</Button>
+      <Alert variant="success">This is an alert</Alert>
+      </header>
+    </div>
   );
 }
 
