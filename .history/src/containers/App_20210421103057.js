@@ -19,6 +19,7 @@ export default function App() {
         <div>
           <NavigationBar />
           <Header />
+
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
@@ -37,3 +38,10 @@ export default function App() {
     </React.Fragment>
   );
 }
+
+// function Home()        { return <h2>Home</h2> }
+// function About()       { return <h2>About</h2> }
+// function Users()       { return <h2>Users</h2> }
+// function Books()       { return <h2>Books</h2> }
+// function Bestseller()  { return <h2>Best Seller</h2> }
+// function Notes()       { return <h2>Notes</h2> }

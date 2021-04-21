@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Alert, Breadcrumb, Card, Form } from 'react-bootstrap';
+import Layout from '../components/Layout';
 
 const Login = () => {
     return (
