@@ -4,25 +4,14 @@ import { Form, Row, Col, Button } from 'react-bootstrap';
 
 class Books extends Component {
 
-    const [book, setBook] = useState("");
-    
-
-    function handleChange(event) {
-
-    }
-
-    function handleSubmit(event) {
-
-    }
-
     render() {
         return (
             <div>
-                <Form onSubmit={handleSubmit}>
+                <Form>
                     <Row>
-                        <Col xs={4}>
+                        <Col md="auto" xs={6}>sm=8
                         <Form.Group controlId="forSearchBooks">
-                            <Form.Control type="text" placeholder="search books" onChange={handleChange} />
+                            <Form.Control type="text" placeholder="search books" />
                             <Form.Text> Find books enlighening your mind! </Form.Text>
                         </Form.Group>
                         </Col>

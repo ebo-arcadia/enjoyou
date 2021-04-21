@@ -4,17 +4,6 @@ import { Form, Row, Col, Button } from 'react-bootstrap';
 
 class Books extends Component {
 
-    const [book, setBook] = useState("");
-    
-
-    function handleChange(event) {
-
-    }
-
-    function handleSubmit(event) {
-
-    }
-
     render() {
         return (
             <div>
