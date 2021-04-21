@@ -19,6 +19,7 @@ export default function App() {
       <Router>
         <div>
           <NavigationBar />
+          <BackgroundImagePage/>
           <Header />
           <nav>
             <Breadcrumb>

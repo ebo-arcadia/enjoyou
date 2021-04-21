@@ -31,6 +31,6 @@ body, html {
 }
 
 .main-info h1 {
-  color: blueviolet;
-  text-transform: capitalize;
+  color: var(--primary-orange);
+  text-transform: uppercase;
 }

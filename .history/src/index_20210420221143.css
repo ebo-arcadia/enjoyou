@@ -26,11 +26,4 @@ body, html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Roboto Condesed, sans-serif";
-
-}
-
-.main-info h1 {
-  color: blueviolet;
-  text-transform: capitalize;
 }

@@ -11,6 +11,7 @@ import Video from '../containers/Video';
 import About from '../components/About'
 import { Breadcrumb } from 'react-bootstrap';
 import NavigationBar from '../components/NavigationBar';
+import BackgroundImagePage from '../components/BackgroundImagePage'
 import Header from '../components/Header'
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
       <Router>
         <div>
           <NavigationBar />
+          <BackgroundImagePage/>
           <Header />
           <nav>
             <Breadcrumb>
