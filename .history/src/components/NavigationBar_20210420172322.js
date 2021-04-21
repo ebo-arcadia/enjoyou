@@ -1,11 +1,12 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import Logo from '../assets/logo.png';
 
 const NavigationBar = () => {
     return (
+      <Container>
         <Navbar bg="primary" expand="lg" variant="dark">
-        <Navbar.Brand href="#home"><img src={Logo} style={{width: 50, height: 45}} className="logo" alt="logo"/>EnjoYou!</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={Logo} className="logo" alt="logo"/>EnjoYou!</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
@@ -25,6 +26,7 @@ const NavigationBar = () => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
+    </Container>
     )
 }
 

@@ -1,13 +1,14 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import Logo from '../assets/logo.png';
 
 const NavigationBar = () => {
     return (
         <Navbar bg="primary" expand="lg" variant="dark">
-        <Navbar.Brand href="#home"><img src={Logo} style={{width: 50, height: 45}} className="logo" alt="logo"/>EnjoYou!</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={Logo} className="logo" alt="logo"/>EnjoYou!</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
+        <Container>
           <Nav className="ml-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
@@ -23,6 +24,7 @@ const NavigationBar = () => {
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-success">Search</Button>
           </Form>
+          </Container>
         </Navbar.Collapse>
       </Navbar>
     )
