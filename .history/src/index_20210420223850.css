@@ -2,6 +2,16 @@ body, html {
   height: 100%;
 }
 
+/* .bg {
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+  position: relative; 
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+
 /* -------------Header--------------- */
 
 .header-wraper {
@@ -38,13 +48,4 @@ body, html {
 .typed-text {
   color: blue;
   font-size: 2rem;
-}
-
-/* ----------Navigation Bar-------------- */
-
-
-.nav-link:hover {
-  text-decoration: none;
-  background-color: crimson;
-  transition: .3s ease-in-out;
 }

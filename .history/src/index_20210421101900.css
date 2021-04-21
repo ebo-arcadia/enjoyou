@@ -42,6 +42,10 @@ body, html {
 
 /* ----------Navigation Bar-------------- */
 
+nav {
+  position: sticky;
+  top: 0;
+}
 
 .nav-link:hover {
   text-decoration: none;

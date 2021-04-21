@@ -40,11 +40,11 @@ body, html {
   font-size: 2rem;
 }
 
-/* ----------Navigation Bar-------------- */
+/* ----------Particles-------------- */
 
-
-.nav-link:hover {
-  text-decoration: none;
-  background-color: crimson;
-  transition: .3s ease-in-out;
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
 }

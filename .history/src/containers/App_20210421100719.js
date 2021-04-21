@@ -1,6 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from '../components/Home';
 import BooksList from '../components/BooksList';
 import Login from '../containers/Login';
@@ -9,6 +9,7 @@ import Blog from '../containers/Blog';
 import Projects from '../containers/Projects';
 import Video from '../containers/Video';
 import About from '../components/About'
+import { Breadcrumb } from 'react-bootstrap';
 import NavigationBar from '../components/NavigationBar';
 import Header from '../components/Header'
 
@@ -19,6 +20,18 @@ export default function App() {
         <div>
           <NavigationBar />
           <Header />
+          <nav>
+            <Breadcrumb>
+              <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
+              <Breadcrumb.Item><Link to="/books">Books</Link></Breadcrumb.Item>
+              <Breadcrumb.Item><Link to="/login">Login</Link></Breadcrumb.Item>
+              <Breadcrumb.Item><Link to="/signup">Signup</Link></Breadcrumb.Item>
+              <Breadcrumb.Item><Link to="/blog">Blog</Link></Breadcrumb.Item>
+              <Breadcrumb.Item><Link to="/projects">Projects</Link></Breadcrumb.Item>
+              <Breadcrumb.Item><Link to="/video">Video</Link></Breadcrumb.Item>
+              <Breadcrumb.Item><Link to="/about">About</Link></Breadcrumb.Item>
+            </Breadcrumb>
+          </nav>
 
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}

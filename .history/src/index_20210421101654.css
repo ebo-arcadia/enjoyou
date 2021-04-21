@@ -42,9 +42,12 @@ body, html {
 
 /* ----------Navigation Bar-------------- */
 
+nav {
+  z-index: 2;
+}
 
 .nav-link:hover {
   text-decoration: none;
   background-color: crimson;
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
 }

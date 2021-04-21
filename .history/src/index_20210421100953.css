@@ -40,11 +40,6 @@ body, html {
   font-size: 2rem;
 }
 
-/* ----------Navigation Bar-------------- */
-
-
-.nav-link:hover {
-  text-decoration: none;
-  background-color: crimson;
-  transition: .3s ease-in-out;
+nav {
+  z-index: 2;
 }

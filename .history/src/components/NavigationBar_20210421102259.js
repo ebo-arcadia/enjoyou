@@ -5,7 +5,7 @@ import Logo from '../assets/logo.png';
 
 const NavigationBar = () => {
     return (
-        <Navbar bg="primary" expand="lg" variant="dark" fixed="top" style={{position: "sticky"}}>
+        <Navbar bg="primary" expand="lg" variant="dark" style={{position: "sticky"}}>
         <Navbar.Brand href="home"><img src={Logo} style={{width: 50, height: 45}} className="logo" alt="logo"/>EnjoYou!</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
