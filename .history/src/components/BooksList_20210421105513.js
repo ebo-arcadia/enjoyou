@@ -9,7 +9,7 @@ const BooksList = () => {
                     <Card.Img src="../assets/logo.png" alt="books"/>
                     <Card.Body>
                         <Card.Title>Book list (Card Title)</Card.Title>
-                        <Card.Text>All books (Card text)</Card.Text>
+                        <Card.Text>(Card text)</Card.Text>
                     </Card.Body>
                     </Card>
         </div>
