@@ -1,0 +1,19 @@
+body, html {
+  height: 100%;
+}
+
+.bg {
+  background-image: url(background-header.jpg);
+  position: relative; 
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* 
+.header-wraper {
+  position: relative;
+  background: url(background-header.jpg) no-repeat;
+  background-size: cover;
+  height: 90;
+} */

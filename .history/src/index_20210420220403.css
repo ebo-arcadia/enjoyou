@@ -2,20 +2,18 @@ body, html {
   height: 100%;
 }
 
-/* .bg {
+.bg {
   background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
   position: relative; 
-  height: 50vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-.header-wraper {
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
-  position: relative; 
-  height: 50vh;
+  height: 90vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* 
+.header-wraper {
+  position: relative;
+  background: url(background-header.jpg) no-repeat;
+  background-size: cover;
+  height: 90;
+} */
