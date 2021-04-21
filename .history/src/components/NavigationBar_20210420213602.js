@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import Logo from '../assets/logo.png';
-
+import BackgroundImagePage from './BackgroundImagePage'
 
 const NavigationBar = () => {
     return (
