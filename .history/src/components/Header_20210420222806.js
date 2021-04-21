@@ -11,8 +11,7 @@ const Header = () => {
                     className="typed-text" 
                     strings={["Learn to code","Read a book","Write a blog post","Share a video"]}
                     typeSpeed={40}
-                    backSpeed={60}
-                    loop    
+                    backSpeed={60}    
                 />
             </div>
         </div>

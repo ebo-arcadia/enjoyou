@@ -41,6 +41,6 @@ body, html {
 /* ----------Typed Text-------------- */
 
 .typed-text {
-  color: blue;
+  color: var(--primary-blue);
   font-size: 2rem;
 }

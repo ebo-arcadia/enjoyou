@@ -39,8 +39,7 @@ body, html {
 }
 
 /* ----------Typed Text-------------- */
-
 .typed-text {
-  color: blue;
   font-size: 2rem;
+  color: black;
 }
