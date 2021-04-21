@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 const BooksList = (props) => {
     return (
@@ -13,13 +13,12 @@ const BooksList = (props) => {
                 </li>
             )}
             {/* <Card className="mb-3" style={{ color: "#000"}}>
-            <Card.Body>
-                    {props.books.map((book, index) => {
-                        <Card.Img src="" alt="books" />,
-                        <Card.Title key={index} >{book.display_title}</Card.Title>,
-                        <Card.Text>{book.headline}</Card.Text>,
-                        <Card.Text>{book.summary_short}</Card.Text>
-                    }
+                <Card.Body>
+                    {props.books.map((book, index) =>
+                    <Card.Img src="" alt="books" />,
+                    <Card.Title>{book.display_title}</Card.Title>,
+                    <Card.Text>{book.headline}</Card.Text>,
+                    <Card.Text>{book.summary_short}</Card.Text>
                 )}
                 </Card.Body>
             </Card> */}

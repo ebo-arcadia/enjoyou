@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import BooksList from '../components/BooksList';
 import { Form, Row, Col, Button } from 'react-bootstrap';
+import 'isomorphic-fetch';
 
-const NYT_API_KEY = 'dGpQ5OmGP2SgfvZimlpCUoF4iOag9qzZ';
-const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?'
-            + `api-key=${NYT_API_KEY}`;
 class Books extends Component {
     constructor() {
         super();
         this.state = { books: [], searchTerm: ""};
     }
+
+    // componentDidMount() {
+    //     let url = "https://api.giphy.com/v1/gifs/search?q=YOUR%20QUERY%20HERE&api_key=dc6zaTOxFJmzC&rating=g"
+    //     fetch(url)
+    //     .then(response => response.json())
+    //     .then(booksData = this.state.setState({ books: booksData.data }))
+    // }
 
     handleChange = (event) => {
         this.setState({ searchTerm: event.target.value })
@@ -22,9 +27,9 @@ class Books extends Component {
     }
 
     searchBooks = (searchTerm="Top pick") => {
-        fetch(URL + `&query=${searchTerm}`)
+        fetch(`https://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=dc6zaTOxFJmzC&rating=g`)
         .then(response => response.json())
-        .then(booksData => this.setState({ books: booksData.result}))
+        .then(booksData => this.setState({ books: booksData.data}))
     }
 
     render() {
@@ -41,7 +46,7 @@ class Books extends Component {
                     </Row>
                     <Button variant="primary" type="submit">Search</Button>
                 </Form>
-                <BooksList books={this.state.books} />
+                <BooksList />
             </div>
             
         )

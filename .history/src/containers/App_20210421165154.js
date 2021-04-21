@@ -11,6 +11,7 @@ import Projects from '../containers/Projects';
 import Video from '../containers/Video';
 import About from '../components/About'
 import NavigationBar from '../components/NavigationBar';
+import Header from '../components/Header'
 
 export default function App() {
   return (

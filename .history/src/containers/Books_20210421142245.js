@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import BooksList from '../components/BooksList';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 
-const NYT_API_KEY = 'dGpQ5OmGP2SgfvZimlpCUoF4iOag9qzZ';
-const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?'
-            + `api-key=${NYT_API_KEY}`;
 class Books extends Component {
     constructor() {
         super();
@@ -22,9 +19,9 @@ class Books extends Component {
     }
 
     searchBooks = (searchTerm="Top pick") => {
-        fetch(URL + `&query=${searchTerm}`)
+        fetch()
         .then(response => response.json())
-        .then(booksData => this.setState({ books: booksData.result}))
+        .then(books => this.setState({ books: books}))
     }
 
     render() {
@@ -34,14 +31,14 @@ class Books extends Component {
                     <Row>
                         <Col xs={4}>
                         <Form.Group controlId="forSearchBooks">
-                            <Form.Control type="text" placeholder="search books" value={this.state.searchTerm} onChange={this.handleChange} />
+                            <Form.Control type="text" placeholder="search books" onChange={this.handleChange} />
                             <Form.Text> Find books enlighening your mind! </Form.Text>
                         </Form.Group>
                         </Col>
                     </Row>
                     <Button variant="primary" type="submit">Search</Button>
                 </Form>
-                <BooksList books={this.state.books} />
+                <BooksList />
             </div>
             
         )
