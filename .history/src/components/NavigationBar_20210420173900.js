@@ -5,11 +5,12 @@ import Logo from '../assets/logo.png';
 const NavigationBar = () => {
     return (
         <Navbar bg="primary" expand="lg" variant="dark">
-        <Navbar.Brand href="home"><img src={Logo} style={{width: 50, height: 45}} className="logo" alt="logo"/>EnjoYou!</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={Logo} style={{width: 50, height: 45}} className="logo" alt="logo"/>EnjoYou!</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="home">Home</Nav.Link>
             <Nav.Link href="books">Books</Nav.Link>
             <Nav.Link href="login">Login</Nav.Link>
             <Nav.Link href="signup">Signup</Nav.Link>
