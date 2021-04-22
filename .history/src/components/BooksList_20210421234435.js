@@ -8,7 +8,7 @@ const BooksList = (props) => {
                 {props.result.slice(0,3).map((gif) => {
                     return (
                         <Card key={gif.id}>
-                            <Card.Img className="gif" src={gif.images.original.url} alt={gif.images.original.frames} />
+                            <img className="gif" src={gif.images.original.url} alt={gif.images.original.frames} />
                         </Card>
                     )
                 })}
