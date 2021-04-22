@@ -14,10 +14,8 @@ function Books() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        alert(`submitting books ${book}`)
         console.log(book)
-        fetch(`https://api.giphy.com/v1/gifs/search?q=${book}&api_key=dc6zaTOxFJmzC&rating=g`)
-        .then(response => response.json())
-        .then(data => {setResult(data.data)})
     }
 
     return (
@@ -27,16 +25,6 @@ function Books() {
                 <input type="text" value={book} onChange={event => setBook(event.target.value)} />
             <input type="submit" value="Submit" />
             </form>
-            <ul>
-            <h2>List of gif pictures</h2>
-            {result.slice(0,3).map((gif) => {
-                return (
-                    <li key={gif.id}>
-                        <img className="gif" src={gif.images.original.url} alt={gif.images.original.frames}></img>
-                    </li>
-                )
-            })}
-        </ul>
         </>
     )
 }
