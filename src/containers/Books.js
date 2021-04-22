@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import BooksList from '../components/BooksList';
 import { Form, Row, Col, Button, FormControl } from 'react-bootstrap';
 
@@ -8,6 +8,16 @@ const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?'
 
 // using hooks
 function Books() {
+
+    const bookHeader = () => {
+        return (
+            <div className='main-image d-flex justify-content-center align-items-center flex-column' >
+                {/* {whatever} */}
+                <div className="filter"></div>
+            </div>
+        )
+    }
+
     const [book, setBook] = useState("");
     const [result, setResult] = useState([]);
     const [apiKey, setApiKey] = useState("dGpQ5OmGP2SgfvZimlpCUoF4iOag9qzZ")
