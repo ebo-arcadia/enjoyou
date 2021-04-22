@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import BooksList from '../components/BooksList';
-import { Form, Row, Col, Button, } from 'react-bootstrap';
+import { Form, Row, Col, Button } from 'react-bootstrap';
 
 const NYT_API_KEY = 'dGpQ5OmGP2SgfvZimlpCUoF4iOag9qzZ';
 const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?'
@@ -18,22 +18,25 @@ function Books() {
         fetch(`https://api.giphy.com/v1/gifs/search?q=${book}&api_key=dc6zaTOxFJmzC&rating=g`)
         .then(response => response.json())
         .then(data => {setResult(data.data)})
-        setBook("")
     }
 
     return (
         <>
-            <Form.Text>Find books enlighten your mind!</Form.Text>
-            <Form onSubmit={handleSubmit}>
-                <Row>
-                    <Col xs={4}>
-                        <Form.Control type="text" value={book} onChange={event => setBook(event.target.value)} />
-                        <Button variant="primary" type="submit">Search</Button>
-                    </Col>
-                </Row>
-
-            </Form>
-            <BooksList result={result}/>
+            <h1>Search books using hooks</h1>
+            <form onSubmit={handleSubmit}>
+                <input type="text" value={book} onChange={event => setBook(event.target.value)} />
+            <input type="submit" value="Submit" />
+            </form>
+            <ul>
+            <h2>List of gif pictures</h2>
+            {result.slice(0,3).map((gif) => {
+                return (
+                    <li key={gif.id}>
+                        <img className="gif" src={gif.images.original.url} alt={gif.images.original.frames}></img>
+                    </li>
+                )
+            })}
+        </ul>
         </>
     )
 }

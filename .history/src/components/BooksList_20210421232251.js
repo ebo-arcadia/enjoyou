@@ -4,7 +4,7 @@ import React from 'react';
 const BooksList = (props) => {
     return (
             <ul className="book-list">
-                <h2>searched books</h2>
+                <h2>List of gif pictures</h2>
                 {props.result.slice(0,3).map((gif) => {
                     return (
                         <li key={gif.id}>

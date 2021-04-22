@@ -1,11 +1,11 @@
 import React from 'react';
 // import { Card } from 'react-bootstrap';
 
-const BooksList = (props) => {
+const BooksList = () => {
     return (
             <ul className="book-list">
-                <h2>searched books</h2>
-                {props.result.slice(0,3).map((gif) => {
+                <h2>List of gif pictures</h2>
+                {result.slice(0,3).map((gif) => {
                     return (
                         <li key={gif.id}>
                             <img className="gif" src={gif.images.original.url} alt={gif.images.original.frames}></img>

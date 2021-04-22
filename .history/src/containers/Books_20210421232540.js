@@ -23,15 +23,10 @@ function Books() {
 
     return (
         <>
-            <Form.Text>Find books enlighten your mind!</Form.Text>
+            <h1>Search books using hooks</h1>
             <Form onSubmit={handleSubmit}>
-                <Row>
-                    <Col xs={4}>
-                        <Form.Control type="text" value={book} onChange={event => setBook(event.target.value)} />
-                        <Button variant="primary" type="submit">Search</Button>
-                    </Col>
-                </Row>
-
+                <input type="text" value={book} onChange={event => setBook(event.target.value)} />
+                <input type="submit" value="Submit" />
             </Form>
             <BooksList result={result}/>
         </>
