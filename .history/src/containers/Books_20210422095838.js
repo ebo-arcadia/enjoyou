@@ -26,7 +26,7 @@ function Books() {
             <Form.Text>Find books enlighten your mind!</Form.Text>
             <Form inline onSubmit={handleSubmit}>
                 <Row>
-                    <Col xs={8}>
+                    <Col xs={4}>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" value={book} onChange={event => setBook(event.target.value)} />
                     </Col>
                     <Col>
