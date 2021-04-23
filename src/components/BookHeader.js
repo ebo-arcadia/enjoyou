@@ -1,6 +1,6 @@
 import React from 'react';
 import "../book.css";
-import { InputGroup, FormControl, FormGroup, FormLabel, Form, Col, Button } from 'react-bootstrap'
+import { InputGroup, FormControl, FormGroup, FormLabel, Form, Col, Button, Spinner } from 'react-bootstrap'
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -38,6 +38,19 @@ const BookHeader = () => {
         }
     }
 
+    const handleCards = () => {
+        if (loading) {
+            return (
+                <div className="d-flex justify-content-center mt-3">
+                    <Spinner animation="border" role="status" variant="warning">
+                        <span className="sr-only">Loading...Please wait.</span>
+                    </Spinner>
+                </div>
+            )
+        }
+    }
+
+    const headerForm = () => {
     return (
         <div className="header-background-image d-flex justify-content-center align-items-center flex-column" >
             <div className="filter">
@@ -55,7 +68,6 @@ const BookHeader = () => {
                             <Button variant="success" onClick={handleSubmit}>
                                 <i className='fas fa-search'></i>
                             </Button>
-                            <ToastContainer />
                         </InputGroup.Append>
                     </InputGroup>
                     <Form.Row>
@@ -81,7 +93,15 @@ const BookHeader = () => {
                         </FormGroup>
                     </Form.Row>
                 </div>
+                {handleCards()}
             </div>
+        </div>
+    )}
+
+    return (
+        <div>
+            {headerForm()}
+            <ToastContainer />
         </div>
     )
 }
