@@ -28,7 +28,7 @@ function Books() {
     return (
         <div>
             <BookHeader />
-            <Form.Text>Find books enlighten your mind!</Form.Text>
+            <Form.Text>Find books enlightening your mind</Form.Text>
             <Form inline onSubmit={handleSubmit}>
                 <Row>
                     <Col xs={8}>

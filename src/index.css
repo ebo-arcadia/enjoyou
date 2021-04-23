@@ -9,7 +9,7 @@ body, html {
 /* -------------Home Header--------------- */
 
 .header-wraper {
-  background: url(../src/assets/background-header.jpg);
+  background: url(../src/assets/home-background.jpg);
   opacity: 0.50;
   position: relative; 
   height: 100vh;

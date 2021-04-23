@@ -2,8 +2,8 @@ body, html {
     height: 100%;
   }
 
-.main-image {
-    background-image: url(https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+.header-background-image {
+    background: url(../src/assets/book-background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -12,3 +12,16 @@ body, html {
     position: relative;
     background-attachment: fixed;
   }
+
+.filter:after {
+    background-color: rgba(red, green, blue, alpha);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    color:blue;
+}
