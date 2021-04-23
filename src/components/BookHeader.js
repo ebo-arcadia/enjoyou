@@ -4,6 +4,7 @@ import { InputGroup, FormControl, FormGroup, FormLabel, Form, Col, Button, Spinn
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BookCard from './BookCard'
 
 const BookHeader = () => {
 
@@ -48,7 +49,7 @@ const BookHeader = () => {
 
             return (
                 <div className="col-lg-4" key={ item.id }>
-                    {/* <BookCard imageLink = {thumbnail} /> */}
+                    <BookCard thumbnail = {thumbnail} />
                 </div>
             )
         })
@@ -60,8 +61,14 @@ const BookHeader = () => {
                         <span className="sr-only">Loading...Please wait.</span>
                     </Spinner>
                 </div>
+            );
+        } else {
+            return (
+                <div className="container my-5">
+                    <div className="row"> { items }</div>
+                </div>
             )
-        }
+        };
     }
 
     const headerForm = () => {
@@ -112,7 +119,7 @@ const BookHeader = () => {
     )}
 
     return (
-        <div>
+        <div className="w-100 h-100">
             {headerForm()}
             <ToastContainer />
             {handleCards()}
