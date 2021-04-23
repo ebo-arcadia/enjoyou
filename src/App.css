@@ -1,12 +1,3 @@
-/* 
-.logo {
-  width: 100rem;
-  size: 10rem;
+body{
+  overflow-x: hidden;
 }
-
-.header-wraper {
-  position: relative;
-  background: url(background-header.jpg) no-repeat;
-  background-size: cover;
-  height: 90;
-} */

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import BooksList from '../components/BooksList';
 import { Form, Row, Col, Button, FormControl } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "../book.css";
+import BookHeader from '../components/BookHeader'
 
 const NYT_API_KEY = 'dGpQ5OmGP2SgfvZimlpCUoF4iOag9qzZ';
 const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?'
@@ -8,15 +11,6 @@ const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?'
 
 // using hooks
 function Books() {
-
-    const bookHeader = () => {
-        return (
-            <div className='main-image d-flex justify-content-center align-items-center flex-column' >
-                {/* {whatever} */}
-                <div className="filter"></div>
-            </div>
-        )
-    }
 
     const [book, setBook] = useState("");
     const [result, setResult] = useState([]);
@@ -32,7 +26,8 @@ function Books() {
     }
 
     return (
-        <>
+        <div>
+            <BookHeader />
             <Form.Text>Find books enlighten your mind!</Form.Text>
             <Form inline onSubmit={handleSubmit}>
                 <Row>
@@ -46,7 +41,7 @@ function Books() {
 
             </Form>
             <BooksList result={result}/>
-        </>
+        </div>
     )
 }
 
