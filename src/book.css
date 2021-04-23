@@ -13,7 +13,7 @@ body, html {
     background-attachment: fixed;
   }
 
-.filter:after {
+/* .filter:after {
     background-color: rgba(red, green, blue, alpha);
     content: '';
     display: block;
@@ -24,4 +24,4 @@ body, html {
     width: 100%;
     z-index: 1;
     color:blue;
-}
+} */
