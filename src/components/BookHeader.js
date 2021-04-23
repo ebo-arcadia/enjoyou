@@ -2,39 +2,61 @@ import React from 'react';
 import "../book.css";
 import { InputGroup, FormControl, FormGroup, FormLabel, Form, Col, Button } from 'react-bootstrap'
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookHeader = () => {
 
     const [maxResults, setMaxResults] = useState(10)
     const [startIndex, setStartIndex] = useState(1)
     const [query, setQuery] = useState('')
+    const [loading, setLoading] = useState(false)
+
+    const handleSubmit = () => {
+        setLoading(true);
+        if (maxResults > 30 || maxResults < 1) { toast.error('max results must be between 1 and 30')}
+    }
 
     return (
         <div className="header-background-image d-flex justify-content-center align-items-center flex-column" >
-            {/* {whatever} */}
             <div className="filter">
                 <h1 className="display-4 text-center text-white mb-3" style={{zIndex: 2}}>
                     Find books enlightening your mind
                 </h1>
                 <div style={ { width: '100%' } }>
                     <InputGroup size='lg' className='mb-3'>
-                    <FormControl
-                        placeholder="Search Book"
-                        aria-label="Search Book"
-                        aria-describedby="basic-addon2"
-                    />
-                    <InputGroup.Append>
-                        <Button variant="success"><i className='fas fa-search'></i></Button>
-                    </InputGroup.Append>
+                        <FormControl
+                            placeholder="Search Book"
+                            value = {query}
+                            onChange = { evnt => setQuery(evnt.target.value)}
+                        />
+                        <InputGroup.Append>
+                            <Button variant="success" onClick={handleSubmit}>
+                                <i className='fas fa-search'></i>
+                            </Button>
+                            <ToastContainer />
+                        </InputGroup.Append>
                     </InputGroup>
                     <Form.Row>
                         <FormGroup as={Col} md={2} className="ml-5">
                             <FormLabel for="maxResults">Max Results</FormLabel>
-                            <FormControl type="number" id="maxResults" placeholder="Max Result" />
+                            <FormControl 
+                                type="number" 
+                                id="maxResults" 
+                                placeholder="Max Result" 
+                                value = {maxResults}
+                                onChange = { e => setMaxResults(e.target.value)}
+                            />
                         </FormGroup>
                         <FormGroup as={Col} md={2} className="ml-5">
                             <FormLabel for="startIndex">Start Index</FormLabel>
-                            <FormControl type="number" id="StartIndex" placeholder="Start Index" />
+                            <FormControl 
+                                type="number" 
+                                id="StartIndex" 
+                                placeholder="Start Index" 
+                                value = {startIndex}
+                                onChange = { e => setStartIndex(e.target.value)}
+                            />
                         </FormGroup>
                     </Form.Row>
                 </div>
