@@ -27,7 +27,7 @@ const BookHeader = () => {
                     if (booksData.items.length > 0) {
                         setCards(booksData.items)
                         setLoading(false)
-                        console.log(cards)
+                        // console.log(cards)
                     }
                 }
             })
@@ -39,6 +39,20 @@ const BookHeader = () => {
     }
 
     const handleCards = () => {
+        console.log(cards)
+        const items = cards.map((item, indx) => {
+            let thumbnail = '';
+            if (item.volumeInfo.imageLinks.thumbnail) {
+                thumbnail = item.volumeInfo.imageLinks.thumbnail;
+            }
+
+            return (
+                <div className="col-lg-4" key={ item.id }>
+                    {/* <BookCard imageLink = {thumbnail} /> */}
+                </div>
+            )
+        })
+
         if (loading) {
             return (
                 <div className="d-flex justify-content-center mt-3">
@@ -93,7 +107,6 @@ const BookHeader = () => {
                         </FormGroup>
                     </Form.Row>
                 </div>
-                {handleCards()}
             </div>
         </div>
     )}
@@ -102,6 +115,7 @@ const BookHeader = () => {
         <div>
             {headerForm()}
             <ToastContainer />
+            {handleCards()}
         </div>
     )
 }
