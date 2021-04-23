@@ -22,7 +22,7 @@ const BookHeader = () => {
             ).then(response => response.json()
             ).then(booksData => {
                 if (startIndex >= booksData.totalItems || startIndex < 1) {
-                    toast.error( `max book items must be between 1 and ${booksData.totalItems}` );
+                    toast.error( `start index must be between 1 and ${booksData.totalItems}` );
                 } else { 
                     if (booksData.items.length > 0) {
                         setCards(booksData.items)
@@ -30,8 +30,11 @@ const BookHeader = () => {
                         console.log(cards)
                     }
                 }
-            }
-            )
+            })
+            .catch(error => {
+                setLoading(true)
+                toast.error("qury can't be empty")
+            });
         }
     }
 
