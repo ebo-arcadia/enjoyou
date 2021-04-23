@@ -11,10 +11,28 @@ const BookHeader = () => {
     const [startIndex, setStartIndex] = useState(1)
     const [query, setQuery] = useState('')
     const [loading, setLoading] = useState(false)
+    const [cards, setCards] = useState([])
 
     const handleSubmit = () => {
         setLoading(true);
-        if (maxResults > 30 || maxResults < 1) { toast.error('max results must be between 1 and 30')}
+        if (maxResults > 30 || maxResults < 1) { 
+            toast.error('max results must be between 1 and 30');
+        } else {
+            fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=${maxResults}&startIndex=${startIndex}`
+            ).then(response => response.json()
+            ).then(booksData => {
+                if (startIndex >= booksData.totalItems || startIndex < 1) {
+                    toast.error( `max book items must be between 1 and ${booksData.totalItems}` );
+                } else { 
+                    if (booksData.items.length > 0) {
+                        setCards(booksData.items)
+                        setLoading(false)
+                        console.log(cards)
+                    }
+                }
+            }
+            )
+        }
     }
 
     return (
