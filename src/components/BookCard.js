@@ -35,6 +35,7 @@ const BookCard = ( {
                     <p>language: {language} </p>
                     <p>Authors: {authors} </p>
                     <p>Publisher: {publisher} </p>
+                    <p>Description: {description} </p>
                 </Modal.Body>
                 
                 <Modal.Footer>
