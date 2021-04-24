@@ -3,7 +3,7 @@ body, html {
   }
 
 .header-background-image {
-    background: url(../src/assets/book-background.jpg);
+    background: url(../assets/book-background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
