@@ -1,0 +1,27 @@
+body, html {
+    height: 100%;
+  }
+
+.header-background-image {
+    background: url(../src/assets/book-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    background-attachment: fixed;
+  }
+
+/* .filter:after {
+    background-color: rgba(red, green, blue, alpha);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    color:blue;
+} */

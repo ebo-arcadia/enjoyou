@@ -2,12 +2,19 @@ body, html {
   height: 100%;
 }
 
-/* -------------Header--------------- */
+.logo {
+  border-radius: 50%;
+}
+
+/* -------------Home Header--------------- */
 
 .header-wraper {
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+  background: url(../src/assets/home-background.jpg);
+  opacity: 0.50;
   position: relative; 
-  height: 50vh;
+  height: 100vh;
+  width: 100%;
+  display: flex;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

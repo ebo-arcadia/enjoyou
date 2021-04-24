@@ -1,19 +1,19 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
-const BooksList = () => {
+const BooksList = (props) => {
     return (
-        <div>
-            <h1>Render a list of the books here!</h1>
-            <Card className="mb-3" style={{ color: "#000"}}>
-                    <Card.Img src="../assets/logo.png" alt="books"/>
-                    <Card.Body>
-                        <Card.Title>Book list (Card Title)</Card.Title>
-                        <Card.Text>All books (Card text)</Card.Text>
-                    </Card.Body>
-                    </Card>
-        </div>
-    );
-}
+            <ul className="book-list">
+                <h2>searched books</h2>
+                {props.result.slice(0,3).map((gif) => {
+                    return (
+                        <Card key={gif.id}>
+                            <Card.Img className="gif" src={gif.images.original.url} alt={gif.images.original.frames} />
+                        </Card>
+                    )
+                })}
+            </ul>
+            )
+        }
 
 export default BooksList;
