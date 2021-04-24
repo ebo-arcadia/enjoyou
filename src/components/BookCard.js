@@ -41,10 +41,10 @@ const BookCard = ( {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="outline-success" onClick={handleClose}>
+                    <Button variant="outline-success" target='_blank' href={previewLink}>
                         Preview Link
                     </Button>
-                    <Button variant="outline-warning" onClick={handleClose}>
+                    <Button variant="outline-warning" target='_blank' href={infoLink}>
                         Info Link
                     </Button>
                 </Modal.Footer>
