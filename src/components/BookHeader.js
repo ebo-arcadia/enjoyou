@@ -28,13 +28,12 @@ const BookHeader = () => {
                     if (booksData.items.length > 0) {
                         setCards(booksData.items)
                         setLoading(false)
-                        // console.log(cards)
                     }
                 }
             })
             .catch(error => {
                 setLoading(true)
-                toast.error("query can't be empty")
+                toast.error("Query can't be empty")
             });
         }
     }
