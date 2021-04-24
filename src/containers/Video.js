@@ -1,38 +1,45 @@
-import React, { useState } from 'react';
-import { Form, Row, Col, Button, FormControl } from 'react-bootstrap';
-import VideoList from '../components/VideoList'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchVideo } from '../actions/VideoActions';
+import VideoList from '../components/VideoList.js'
 
-function Video() {
+class Video extends Component {   
 
-    const [book, setBook] = useState("");
-    const [result, setResult] = useState([]);
+  componentDidMount() {
+    console.log(this.props)
+    this.props.fetchVideo()
+  }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(book)
-        fetch(`https://api.giphy.com/v1/gifs/search?q=${book}&api_key=dc6zaTOxFJmzC&rating=g`)
-        .then(response => response.json())
-        .then(data => {setResult(data.data)})
-        setBook("")
-    }
+  leadingPage = () => {
+    return this.props.loading
+  }
 
+  render() {
+    console.log(this.props.catPics)
+    console.log(this.props.loading)
     return (
-        <div>
-            <Form.Text>Find books enlightening your mind</Form.Text>
-            <Form inline onSubmit={handleSubmit}>
-                <Row>
-                    <Col xs={8}>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" value={book} onChange={event => setBook(event.target.value)} />
-                    </Col>
-                    <Col>
-                    <Button variant="outline-success" type="submit">Search</Button>
-                    </Col>
-                </Row>
+      <div className="App">
+        <h1>CatBook</h1>
+        <VideoList catPics={this.props.catPics}/>
+        {this.leadingPage ? <h2>Loading cats images...</h2> : <h2>done loading!</h2>}
+      </div>
 
-            </Form>
-            <VideoList result={result}/>
-        </div>
-    )
+    );
+  }
 }
 
-export default Video;
+const mapStateToProps = state => {
+  return {
+    catPics: state.cats,
+    loading: state.loading
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchVideo: () => dispatch(fetchVideo())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Video)
+

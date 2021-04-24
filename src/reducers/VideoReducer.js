@@ -1,4 +1,4 @@
-const ProjectsReducer = (state = { cats: [], loading: false}, action) => {
+const VideoReducer = (state = { cats: [], loading: false}, action) => {
     switch(action.type) {
         case 'LOADING_CATS':
             return {
@@ -17,4 +17,4 @@ const ProjectsReducer = (state = { cats: [], loading: false}, action) => {
     }
 }
 
-export default ProjectsReducer
+export default VideoReducer

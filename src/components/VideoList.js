@@ -1,19 +1,12 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
 
 const VideoList = (props) => {
     return (
-            <ul className="book-list">
-                <h2>searched books</h2>
-                {props.result.slice(0,3).map((gif) => {
-                    return (
-                        <Card key={gif.id}>
-                            <Card.Img className="gif" src={gif.images.original.url} alt={gif.images.original.frames} />
-                        </Card>
-                    )
-                })}
-            </ul>
-            )
-        }
+        <div className="cat-list">
+            {props.catPics.map((cat) => <img key={cat.id} src={cat.url} alt="catPic"/> )}
+        </div>
+  
+    )    
+}
 
-export default VideoList;
+export default VideoList

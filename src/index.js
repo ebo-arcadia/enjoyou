@@ -6,9 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
-import ProjectsReducer from './reducers/ProjectsReducer.js';
+import VideoReducer from './reducers/VideoReducer'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const store = createStore(ProjectsReducer, applyMiddleware(thunk))
+const store = createStore(VideoReducer, composeWithDevTools(
+  applyMiddleware(thunk)
+));
 
 ReactDOM.render(
   <Provider store={store}>
