@@ -12,16 +12,3 @@ body, html {
     position: relative;
     background-attachment: fixed;
   }
-
-/* .filter:after {
-    background-color: rgba(red, green, blue, alpha);
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-    color:blue;
-} */

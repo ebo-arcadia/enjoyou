@@ -34,7 +34,7 @@ const BookHeader = () => {
             })
             .catch(error => {
                 setLoading(true)
-                toast.error("qury can't be empty")
+                toast.error("query can't be empty")
             });
         }
     }
