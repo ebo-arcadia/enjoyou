@@ -15,9 +15,9 @@ class Video extends Component {
   }
 
   render() {
-    console.log(this.props.catPics)
-    console.log(this.props.loading)
-    console.log(this.props.fetchVideo)
+    // console.log(this.props.catPics)
+    // console.log(this.props.loading)
+    // console.log(this.props.fetchVideo)
     return (
       <div className="Video">
         <VideoSearch fetchVideo={this.props.fetchVideo}/>

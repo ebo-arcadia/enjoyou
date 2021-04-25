@@ -3,11 +3,12 @@ import { useState } from 'react';
 import { InputGroup, FormControl, Button } from 'react-bootstrap'
 import '../style/video.css'
 
-const VideoSearch = (props) => {
+const VideoSearch = () => {
 
     const [ SearchTerm, setSearchTerm ] = useState('')
+    // const [ VideoList, setVideoList ] = useState([])
 
-    async function handleSubmit() {
+    async function searchAndfetchVideo() {
         console.log(SearchTerm)
         const response = await fetch(`https://youtube-search-results.p.rapidapi.com/youtube-search/?q=${SearchTerm}`, {
             "method": "GET",
@@ -20,9 +21,12 @@ const VideoSearch = (props) => {
         console.log(body);
         const videoItems = body.items.filter(item => item.type === 'video');
         console.log(videoItems)
+   
         setSearchTerm('')
         return videoItems
     }
+
+
 
     const searchForm = () => {
         return (
@@ -38,8 +42,7 @@ const VideoSearch = (props) => {
                             onChange = { e => setSearchTerm(e.target.value)}
                         />
                         <InputGroup.Append>
-                            <Button variant="warning" onClick={ () => handleSubmit()}>
-                            {/* <Button variant="warning" onClick={() => props.fetchVideo(SearchTerm)}> */}
+                            <Button variant="warning" onClick={ () => searchAndfetchVideo()}>
                                 <i className='fas fa-search'></i>
                             </Button>
                         </InputGroup.Append>
@@ -56,8 +59,6 @@ const VideoSearch = (props) => {
     )
 
 }
-
-
 
 export default VideoSearch;
 
