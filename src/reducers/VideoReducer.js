@@ -1,4 +1,4 @@
-const VideoReducer = (state = { cats: [], loading: false}, action) => {
+const VideoReducer = (state = { cats: [], video: [], loading: false}, action) => {
     switch(action.type) {
         case 'LOADING_CATS':
             return {
@@ -10,6 +10,12 @@ const VideoReducer = (state = { cats: [], loading: false}, action) => {
             return {
                 ...state,
                 cats: action.cats,
+                loading: false
+            }
+        case 'ADD_VIDEO':
+            return {
+                ...state,
+                videoItems: action.videoItems,
                 loading: false
             }
         default: 

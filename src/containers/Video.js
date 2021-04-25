@@ -7,7 +7,6 @@ import VideoSearch from './VideoSearch'
 class Video extends Component {   
 
   componentDidMount() {
-    console.log(this.props)
     this.props.fetchVideo()
   }
 
@@ -18,9 +17,10 @@ class Video extends Component {
   render() {
     console.log(this.props.catPics)
     console.log(this.props.loading)
+    console.log(this.props.fetchVideo)
     return (
-      <div className="App">
-        <VideoSearch />
+      <div className="Video">
+        <VideoSearch fetchVideo={this.props.fetchVideo}/>
         <VideoList catPics={this.props.catPics}/>
         {this.leadingPage ? <h2>Loading cats images...</h2> : <h2>done loading!</h2>}
       </div>
@@ -32,6 +32,7 @@ class Video extends Component {
 const mapStateToProps = state => {
   return {
     catPics: state.cats,
+    videoItems: state.videoItems,
     loading: state.loading
   }
 }

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { InputGroup, FormControl, Button } from 'react-bootstrap'
 import '../style/video.css'
 
-const VideoSearch =() => {
+const VideoSearch = (props) => {
 
     const [ SearchTerm, setSearchTerm ] = useState('')
 
@@ -18,7 +18,10 @@ const VideoSearch =() => {
         });
         const body = await response.json();
         console.log(body);
-        return body.items.filter(item => item.type === 'video');
+        const videoItems = body.items.filter(item => item.type === 'video');
+        console.log(videoItems)
+        setSearchTerm('')
+        return videoItems
     }
 
     const searchForm = () => {
@@ -36,6 +39,7 @@ const VideoSearch =() => {
                         />
                         <InputGroup.Append>
                             <Button variant="warning" onClick={ () => handleSubmit()}>
+                            {/* <Button variant="warning" onClick={() => props.fetchVideo(SearchTerm)}> */}
                                 <i className='fas fa-search'></i>
                             </Button>
                         </InputGroup.Append>
