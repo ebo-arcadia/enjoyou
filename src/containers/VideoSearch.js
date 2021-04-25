@@ -6,26 +6,34 @@ import '../style/video.css'
 const VideoSearch = () => {
 
     const [ SearchTerm, setSearchTerm ] = useState('')
-    // const [ VideoList, setVideoList ] = useState([])
+    const [ VideoList, setVideoList ] = useState([])
 
-    async function searchAndfetchVideo() {
+    const searchAndfetchVideo = () => {
         console.log(SearchTerm)
-        const response = await fetch(`https://youtube-search-results.p.rapidapi.com/youtube-search/?q=${SearchTerm}`, {
+        fetch(`https://youtube-search-results.p.rapidapi.com/youtube-search/?q=${SearchTerm}`, {
             "method": "GET",
             "headers": {
             "x-rapidapi-host": "youtube-search-results.p.rapidapi.com",
             "x-rapidapi-key": "931bd8e87fmsh0fd2ab219e7212ap1806bejsn8dd9a7988687"
             }
-        });
-        const body = await response.json();
-        console.log(body);
-        const videoItems = body.items.filter(item => item.type === 'video');
-        console.log(videoItems)
-   
-        setSearchTerm('')
-        return videoItems
+        }
+        ).then(response => response.json()
+        ).then(videoData => {
+            let filteredVideoList = videoData.items.filter(item => item.type === 'video')
+            console.log(filteredVideoList)
+            setVideoList(filteredVideoList)
+            console.log(VideoList)
+            return filteredVideoList
+        }
+        ).catch(error => { alert(error.message)})
+        // const body = await response.json();
+        // console.log(body);
+        // const videoItems = body.items.filter(item => item.type === 'video');
+        // console.log(videoItems)
+        // setSearchTerm('').then(setVideoList)
+        // console.log(VideoList)
+        // return videoItems
     }
-
 
 
     const searchForm = () => {
