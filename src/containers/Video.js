@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchVideo } from '../actions/VideoActions';
 import VideoList from '../components/VideoList.js'
+import VideoSearch from './VideoSearch'
 
 class Video extends Component {   
 
@@ -19,7 +20,7 @@ class Video extends Component {
     console.log(this.props.loading)
     return (
       <div className="App">
-        <h1>CatBook</h1>
+        <VideoSearch />
         <VideoList catPics={this.props.catPics}/>
         {this.leadingPage ? <h2>Loading cats images...</h2> : <h2>done loading!</h2>}
       </div>
