@@ -1,6 +1,16 @@
 import React from 'react';
 import VideoCard from './VideoCard';
 
+const VideoList = ({videoList}) => {
+    console.log(videoList)
+    if (videoList) {
+         videoList.map(video => {
+            return <VideoCard key={video.id} video={video} />
+        })
+    }
+    return <div></div>
+}
+
 // class VideoList extends Component {
 //     render() {
 //         const { videoList } = this.props;
@@ -40,15 +50,5 @@ import VideoCard from './VideoCard';
 
 
 // }
-
-const VideoList = ({videoList}) => {
-    console.log(videoList)
-    if (videoList) {
-         videoList.map(video => {
-            return <VideoCard key={video.id} video={video} />
-        })
-    }
-    return <div></div>
-}
 
 export default VideoList;
