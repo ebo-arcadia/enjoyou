@@ -6,17 +6,19 @@ import '../style/video.css'
 const VideoSearch = () => {   
 
     async function searchYouTube(searchTerm) {
-        const response = await fetch(`https://youtube-search-results.p.rapidapi.com/youtube-search/?q=${searchTerm}`, {
-          "method": "GET",
-          "headers": {
-            "x-rapidapi-host": "youtube-search-results.p.rapidapi.com",
-            "x-rapidapi-key": "931bd8e87fmsh0fd2ab219e7212ap1806bejsn8dd9a7988687"
-          }
-        });
-        const videoData = await response.json();
-        const filteredVideoData = videoData.items.filter(item => item.type === 'video');
-        console.log(filteredVideoData)
-        return filteredVideoData
+        try {
+            const response = await fetch(`https://youtube-search-results.p.rapidapi.com/youtube-search/?q=${searchTerm}`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "youtube-search-results.p.rapidapi.com",
+                "x-rapidapi-key": "931bd8e87fmsh0fd2ab219e7212ap1806bejsn8dd9a7988687"
+            }
+            });
+            const videoData = await response.json();
+            const filteredVideoData = videoData.items.filter(item => item.type === 'video');
+            console.log(filteredVideoData)
+            return filteredVideoData
+        } catch (error) { alert(error) };
     }
 
     const [ searchTerm, setSearchTerm ] = useState('most epic movie soundtrack');
