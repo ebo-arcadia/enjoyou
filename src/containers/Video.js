@@ -6,7 +6,6 @@ const Video = () => {
     return (
         <div className="video-search">
             <VideoSearch />
-            <VideoList />
         </div>
     )
 }

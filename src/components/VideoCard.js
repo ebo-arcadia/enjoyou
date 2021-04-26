@@ -1,10 +1,12 @@
 import React from 'react';
+import { Card, CardImg, Button, Modal  } from 'react-bootstrap';
 
-const VideoCard = () => {
+const VideoCard = ({video}) => {
+    console.log(video)
     return (
-        <div>
-            
-        </div>
+        <Card>
+            <Card.Title>{video.title}</Card.Title>
+        </Card>
     )
 }
 
