@@ -19,7 +19,7 @@ const VideoSearch = () => {
         return filteredVideoData
     }
 
-    const [ searchTerm, setSearchTerm ] = useState('top news today');
+    const [ searchTerm, setSearchTerm ] = useState('Most watched Today');
     const [ videoList, setVideoList ] = useState(null);
 
     const search = (e) => {
@@ -30,11 +30,20 @@ const VideoSearch = () => {
 
     const passDataToVideoList = () => {
         console.log(videoList)
-        return (
-            <div>
-                <VideoList videoList={videoList}/>
-            </div>
-        )
+        if (videoList) {
+            videoList.map((video) => { console.log(video)})
+        }
+        // videoList.map((video) => {
+        //     return (
+        //         <div>
+        //             <VideoList 
+        //                 key={video.id}
+        //                 title={video.title}
+        //                 description={video.description}
+        //             />
+        //         </div>
+        //     )
+        // })
     }
 
     return (

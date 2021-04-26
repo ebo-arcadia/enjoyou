@@ -1,11 +1,15 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
 
-const VideoList = (props) => {
+const VideoList = ({title, description}) => {
     return (
-        <div className="video-list">
-
-        </div>
-    )    
+        <Card>
+            <Card.Body>
+                <Card.Title>{title}</Card.Title>
+                <Card.Text>{description}</Card.Text>
+            </Card.Body>
+        </Card>
+    )
 }
 
 export default VideoList;
