@@ -25,26 +25,20 @@ const VideoSearch = () => {
     const search = (e) => {
         e.preventDefault();
         searchYouTube(searchTerm).then(setVideoList);
-        console.log(videoList)
     };
 
-    const passDataToVideoList = () => {
-        console.log(videoList)
-        if (videoList) {
-            videoList.map((video) => { console.log(video)})
-        }
-        // videoList.map((video) => {
-        //     return (
-        //         <div>
-        //             <VideoList 
-        //                 key={video.id}
-        //                 title={video.title}
-        //                 description={video.description}
-        //             />
-        //         </div>
-        //     )
-        // })
-    }
+    // const passDataToVideoList = () => {
+    //     console.log(videoList)
+    //     if (videoList) {
+    //         videoList.map((video) => 
+    //                     <VideoList 
+    //                         key={video.id}
+    //                         title={video.title}
+    //                         description={video.description}
+    //                     />
+    //         )
+    //     }
+    // }
 
     return (
         <div className="video-search-form" >
@@ -58,7 +52,31 @@ const VideoSearch = () => {
                     onChange={e => setSearchTerm(e.target.value)} />
                 <button>Search Video</button>
             </form>
-            {passDataToVideoList()}
+            {/* {passDataToVideoList()} */}
+            {videoList &&
+        (videoList.length === 0
+          ? <p>No results</p>
+          : (
+            <ul className="items">
+              {videoList.map(item => (
+                <li className="item" key={item.id}>
+                  <div>
+                    <b><a href={item.link}>{item.title}</a></b>
+                    <p>{item.description}</p>
+                  </div>
+                  <ul className="meta">
+                    <li>By: <a href={item.author.ref}>{item.author.name}</a></li>
+                    <li>Views: {item.views}</li>
+                    <li>Duration: {item.duration}</li>
+                    <li>Uploaded: {item.uploaded_at}</li>
+                  </ul>
+                  <img alt="" src={item.thumbnail} />
+                </li>
+              ))}
+            </ul>
+          )
+        )
+      }
         </div>
     );
 }

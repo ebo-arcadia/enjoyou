@@ -1,12 +1,13 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
-const VideoList = ({title, description}) => {
+const VideoList = (props) => {
+    console.log(props)
     return (
         <Card>
             <Card.Body>
-                <Card.Title>{title}</Card.Title>
-                <Card.Text>{description}</Card.Text>
+                <Card.Title>{props.title}</Card.Title>
+                <Card.Text>{props.description}</Card.Text>
             </Card.Body>
         </Card>
     )
