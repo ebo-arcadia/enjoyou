@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function Blog() {
 
@@ -7,8 +7,7 @@ export default function Blog() {
         {id: 1, text: "Ultimate guide for React-Redux", posted: false },
         {id: 2, text: "Daily meditation", posted: false },
         {id: 3, text: "10 days with family in Maryland", posted: false }
-    ]) 
-
+    ])
 
     return (
         <div>
@@ -28,20 +27,25 @@ export default function Blog() {
         );
     }
 
+
+
     function AddArticle( {setArticles} ) {
+        const inputValue = useRef();
+        console.log(inputValue)
 
         function handleAddArticle(event) {
             event.preventDefault();
             let text = event.target.elements.addArticle.value
-            let article = { id: 4, text, posted: false};
+            let article = { id: 6, text, posted: false};
             setArticles(previousArticles => {
                 return previousArticles.concat(article)
-            })
+            });
+            inputValue.current.value = ""
         }
 
         return (
             <form onSubmit={handleAddArticle}> 
-                <input name="addArticle" placeholder="Add article" />
+                <input name="addArticle" placeholder="Add article" ref={inputValue} />
                 <button type="submit">Post</button>
             </form>
         )
