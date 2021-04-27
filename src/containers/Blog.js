@@ -1,3 +1,4 @@
+import { red } from '@material-ui/core/colors';
 import React from 'react';
 import { useState, useRef } from 'react';
 
@@ -21,13 +22,11 @@ export default function Blog() {
         return (
             <ul>
                 {articles.map((article) => (
-                    <li key={article.id}>{article.text}</li>
+                    <li style={{color: 'red'}} key={article.id}>{article.text}</li>
                 ))}
             </ul>
         );
     }
-
-
 
     function AddArticle( {setArticles} ) {
         const inputValue = useRef();
@@ -36,7 +35,7 @@ export default function Blog() {
         function handleAddArticle(event) {
             event.preventDefault();
             let text = event.target.elements.addArticle.value
-            let article = { id: 6, text, posted: false};
+            let article = { id: 4, text, posted: false};
             setArticles(previousArticles => {
                 return previousArticles.concat(article)
             });
