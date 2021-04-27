@@ -1,13 +1,18 @@
 import React from 'react';
 
-const Blog = () => {
+export default function Blog() {
+    const article = [
+        {id: 1, text: "Ultimate guide for React-Redux", posted: false },
+        {id: 2, text: "Daily meditation", posted: false },
+        {id: 3, text: "10 days with family in Maryland", posted: false }
+    ]
+
     return (
         <div>
-            <h2>This is your blog page</h2>
-            <p>Eveything you want to write about!</p>
-            <p>CURD for each blog entry?</p>
+            <h1>Write things that matter!</h1>
+            <BlogList article={article} />
+            <AddArticle />
         </div>
     );
+    
 }
-
-export default Blog;
