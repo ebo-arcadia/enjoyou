@@ -11,22 +11,6 @@ const VideoList = ({videoList}) => {
     return <div></div>
 }
 
-// class VideoList extends Component {
-//     render() {
-//         const { videoList } = this.props;
-//         console.log(videoList)
-//         videoList.map(video => (
-//             return 
-//         ))
-//         return (
-//             videoList.map((video) => (
-//                 console.log(video.title)
-//                 <li key={video.id}>
-//                 )
-//             )
-//         )
-//         // })
-
         // this.props.videoList.map((video) => {
         //     console.log(video)
         //     return (

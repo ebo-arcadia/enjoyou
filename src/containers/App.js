@@ -7,7 +7,7 @@ import Books from '../containers/Books';
 import Login from '../containers/Login';
 import Signup from '../containers/Signup';
 import Blog from '../containers/Blog';
-import Projects from '../containers/Projects';
+import Movies from '../containers/Movies';
 import Video from '../containers/Video';
 import About from '../components/About'
 import NavigationBar from '../components/NavigationBar';
@@ -26,7 +26,7 @@ export default function App() {
             <Route path="/login"><Login /></Route>
             <Route path="/signup"><Signup /></Route>
             <Route path="/blog"><Blog /></Route>
-            <Route path="/projects"><Projects /></Route>
+            <Route path="/movies"><Movies /></Route>
             <Route path="/video"><Video /></Route>
             <Route path="/about"><About /></Route>
             <Route exact path="/"><Home /></Route>
