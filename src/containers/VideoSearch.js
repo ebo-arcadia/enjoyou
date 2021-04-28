@@ -3,6 +3,7 @@ import { useState } from 'react';
 import VideoList from '../components/VideoList'
 import '../style/video.css'
 
+
 const VideoSearch = () => {   
 
     async function searchYouTube(searchTerm) {
@@ -43,7 +44,7 @@ const VideoSearch = () => {
             </form>
             <VideoList videoList={videoList} />
 
-            {videoList && (videoList.length === 0 ? <p>No video found</p> : (
+            {/* {videoList && (videoList.length === 0 ? <p>No video found</p> : (
                     <ul className="items">
                         {videoList.map(item => (
                             <li className="item" key={item.id}>
@@ -63,7 +64,7 @@ const VideoSearch = () => {
                         )}
                     </ul>)
                 )
-            }
+            } */}
         </div>
     );
 }
