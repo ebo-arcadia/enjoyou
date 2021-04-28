@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
-import Blog from './containers/Blog';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
-import VideoReducer from './reducers/VideoReducer'
+import rootReducer from './reducers/searchReducer'
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-const store = createStore(VideoReducer, composeWithDevTools(
+const store = createStore(rootReducer, composeWithDevTools(
   applyMiddleware(thunk)
 ));
 
