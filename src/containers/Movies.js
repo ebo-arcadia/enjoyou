@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MovieFooter from '../components/MovieFooter'
 import MovieHeader from '../components/MovieHeader'
 
 class Movies extends Component {
@@ -6,6 +7,7 @@ class Movies extends Component {
         return (
             <div>
                 <MovieHeader />
+                <MovieFooter />
             </div>
         )
     }
