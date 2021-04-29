@@ -3,11 +3,11 @@ const initialState = {
     movies: [] 
 }
 
-const searchReducer = (state = initialState, action) => {
+const MovieReducer = (state = initialState, action) => {
     switch(action.type) {
         default: 
             return state;
     }
 }
 
-export default searchReducer
+export default MovieReducer

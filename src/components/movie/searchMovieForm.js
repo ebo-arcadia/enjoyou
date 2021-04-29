@@ -3,10 +3,10 @@ import { MDBCol, MDBIcon, MDBBtn } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
-// import { connect } from 'react-redux';
-// import { searchMovie } from '../../actions/MovieActions';
+import { connect } from 'react-redux';
+import { searchMovie } from '../../actions/MovieActions';
 
-export class searchMovie extends Component {
+export class searchMovieForm extends Component {
 
     handleOnChange = e => {
         this.props.searchMovie(e.target.value)
@@ -39,9 +39,9 @@ export class searchMovie extends Component {
     }
 }
 
-// const mapStateToProps = state = ({
-//     text: state.movies.text
-// });
+const mapStateToProps = state => ({
+    text: state.movies.text
+});
 
-export default searchMovie;
+export default connect(mapStateToProps)(searchMovieForm);
 
