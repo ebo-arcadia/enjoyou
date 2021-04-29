@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk'
-import rootReducers from './reducers/rootReducers'
-import searchReducer from './reducers/searchReducer.js'
+import thunk from 'redux-thunk';
+import rootReducers from './reducers/rootReducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 const store = createStore(rootReducers, composeWithDevTools(
