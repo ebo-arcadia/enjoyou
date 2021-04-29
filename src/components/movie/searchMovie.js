@@ -3,9 +3,15 @@ import { MDBCol, MDBIcon, MDBBtn } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
+import { connect } from 'react-redux';
+import { searchMoive } from '../../actions/MovieActions';
 
+export class searchMovie extends Component {
 
-class searchMovie extends Component {
+    handleOnChange = e => {
+        this.props.searchMovie(e.target.value)
+    }
+
     render() {
         return (
             <MDBCol md="">
@@ -19,7 +25,7 @@ class searchMovie extends Component {
                             className="form-control form-control-sm ml-3 w-75" 
                             type="text" 
                             placeholder="action? thriller? sci-fi? drama?" aria-label="Search"
-
+                            onChange={this.handleOnChange}
                         />
                     </form>
                     <MDBBtn outline color="warning" rounded size="sm" type="submit" className="mr-auto">
@@ -33,5 +39,9 @@ class searchMovie extends Component {
     }
 }
 
-export default searchMovie;
+const mapStateToProps = state = ({
+    text: state.movies.text
+});
+
+export default connect(mapStateToProps, {searchMoive} )(searchMovie);
 
