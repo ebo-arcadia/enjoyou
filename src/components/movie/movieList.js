@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectsList = (props) => {
+const MovieList = (props) => {
     return (
         <div>
             {/* {relay...} */}
@@ -9,4 +9,4 @@ const ProjectsList = (props) => {
     )    
 }
 
-export default ProjectsList
+export default MovieList
