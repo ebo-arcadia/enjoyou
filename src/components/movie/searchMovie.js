@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { MDBCol, MDBIcon } from "mdbreact";
 
 class searchMovie extends Component {
     render() {
         return (
-            <div>
-                <Form>
-                    <Form.Group controlId="formSearch">
-                        <Form.Label>Ready to find your next binge watch?</Form.Label>
-                        <Form.Control style={{width: 400 }} size="lg" type="text" placeholder="find a movie" />
-                        <Form.Text className="text-muted">
-                        here goes nothing!
-                        </Form.Text>
-                    </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Search
-                    </Button>
-                </Form>
+            <MDBCol md="6">
+            <div className="input-group md-form form-sm form-1 pl-0">
+              <div className="input-group-prepend">
+                <span className="input-group-text purple lighten-3" id="basic-text1">
+                  <MDBIcon className="text-white" icon="search" />
+                </span>
+              </div>
+              <input className="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" />
             </div>
+          </MDBCol>
         )
     }
 }
