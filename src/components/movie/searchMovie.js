@@ -39,9 +39,9 @@ export class searchMovie extends Component {
     }
 }
 
-const mapStateToProps = state = ({
-    text: state.movies.text
-});
+// const mapStateToProps = state = ({
+//     text: state.movies.text
+// });
 
-export default connect(mapStateToProps, {searchMoive} )(searchMovie);
+export default searchMovie;
 
