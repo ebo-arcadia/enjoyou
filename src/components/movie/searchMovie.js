@@ -3,8 +3,8 @@ import { MDBCol, MDBIcon, MDBBtn } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
-import { connect } from 'react-redux';
-import { searchMoive } from '../../actions/MovieActions';
+// import { connect } from 'react-redux';
+// import { searchMovie } from '../../actions/MovieActions';
 
 export class searchMovie extends Component {
 
