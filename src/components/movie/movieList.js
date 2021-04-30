@@ -7,7 +7,7 @@ export class MovieList extends Component {
         const { movies } = this.props;
         let movieItems = movies.Response === 'True' ? movies.Search.map((movie, index) => <MovieCard key={index} movie={movie}/>) : "This movie does not exist. Try something else!";
         return (
-            <div>{movieItems}</div>
+            <div className="row">{movieItems}</div>
         )
     }
 }
