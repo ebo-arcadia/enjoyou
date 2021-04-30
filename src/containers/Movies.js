@@ -14,8 +14,7 @@ class Movies extends Component {
             <div>
                 <MovieHeader />
                 <SearchMovieForm />
-                {/* {loading ? <LoadingSpinner /> : <MovieList />} */}
-                <MovieList />
+                {loading ? <LoadingSpinner /> : <MovieList />}
                 <MovieFooter />
             </div>
         )

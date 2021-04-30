@@ -9,9 +9,9 @@ const initialState = {
 const MovieReducer = (state = initialState, action) => {
     switch(action.type) {
         case SEARCH_MOVIE:
-            return {...state, text: action.payload};
+            return {...state, text: action.payload, loading: false};
         case FETCH_MOVIES:
-            return {...state, movies: action.payload}
+            return {...state, movies: action.payload, loading: false}
         case LOADING_MOVIES:
             return {...state, loading: true}
         default: 
