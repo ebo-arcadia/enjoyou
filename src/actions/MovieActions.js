@@ -1,4 +1,4 @@
-import { SEARCH_MOVIE, FETCH_MOVIES } from './actionTypes';
+import { SEARCH_MOVIE, FETCH_MOVIES, LOADING_MOVIES } from './actionTypes';
 import axios from 'axios';
 
 export const searchMovie = text => dispatch => {
@@ -14,3 +14,9 @@ export const fetchMovies = text => dispatch => {
     .then(response => dispatch( { type: FETCH_MOVIES, payload: response.data.Search} ))
     .catch(error => alert(error))
 };
+
+export const loadingMovies = () => {
+    return {
+        type: LOADING_MOVIES
+    };
+}
