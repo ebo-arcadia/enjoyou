@@ -5,7 +5,9 @@ import MovieCard from './movieCard';
 export class MovieList extends Component {
     render() {
         const { movies } = this.props;
-        let movieItems = movies.Response === 'True' ? movies.Search.map((movie, index) => <MovieCard key={index} movie={movie}/>) : " ";
+        let movieItems = '';
+        
+        movieItems = movies.Response === 'True' ? movies.Search.map((movie, index) => <MovieCard key={index} movie={movie}/>) : movies.Error;
         return (
             <div className="row">{movieItems}</div>
         )
