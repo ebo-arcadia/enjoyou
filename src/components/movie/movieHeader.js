@@ -1,15 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const MovieHeader = () => {
+
+    const handleClick = () => {
+        const url = "/https://www.imdb.com/"
+        window.open(url, '_blank')
+    }
+
     return (
         <div>
             <nav className="navbar navbar-light bg-dark mb-5">
                 <div className="container">
                 <div className="navbar-header">
-                    <Link className="navbar-brand text-white text-lg brand-text" to="/">
-                    Movie Info
-                    </Link>
+                    <Button variant="outline-info" onClick={handleClick}>Check out the latest!</Button>
                 </div>
                 <ul className="navbar-nav ml-auto text-light d-inline-block">
                     <li className="nav-item d-inline-block mr-4">
