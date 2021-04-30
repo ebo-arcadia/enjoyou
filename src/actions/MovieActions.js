@@ -1,7 +1,7 @@
 import { SEARCH_MOVIE, FETCH_MOVIES } from './actionTypes';
 import axios from 'axios';
 
-export const searchMoive = text => dispatch => {
+export const searchMovie = text => dispatch => {
     dispatch({
         type: SEARCH_MOVIE,
         payload: text

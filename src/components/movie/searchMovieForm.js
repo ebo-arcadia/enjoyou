@@ -6,7 +6,7 @@ import 'mdbreact/dist/css/mdb.css';
 import { connect } from 'react-redux';
 import { searchMovie } from '../../actions/MovieActions';
 
-export class searchMovieForm extends Component {
+export class SearchMovieForm extends Component {
 
     handleOnChange = e => {
         this.props.searchMovie(e.target.value)
@@ -43,5 +43,5 @@ const mapStateToProps = state => ({
     text: state.movies.text
 });
 
-export default connect(mapStateToProps)(searchMovieForm);
+export default connect(mapStateToProps, {searchMovie})(SearchMovieForm);
 
