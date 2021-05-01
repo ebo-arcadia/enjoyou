@@ -17,8 +17,3 @@ export const loadAndFetchMovies = (text) => {
     )}
 };
 
-// export const loadingMovies = () => {
-//     return {
-//         type: LOADING_MOVIES
-//     };
-// }

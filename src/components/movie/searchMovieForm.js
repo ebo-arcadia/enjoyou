@@ -11,7 +11,6 @@ export class SearchMovieForm extends Component {
     handleSubmit = e => {
         e.preventDefault();
         this.props.loadAndFetchMovies(this.props.text);
-        // this.props.loadingMovies();
     }
 
     render() {
