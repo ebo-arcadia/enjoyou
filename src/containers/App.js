@@ -4,9 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from '../components/Home';
 import Books from '../containers/Books';
-import Login from '../containers/Login';
-import Signup from '../containers/Signup';
-import Blog from '../containers/Blog';
 import Movies from '../containers/Movies';
 import Video from '../containers/Video';
 import RailsAPI from './RailsAPI'
@@ -23,9 +20,6 @@ export default function App() {
           <Switch>
             <Route path="/home"><Home /></Route>
             <Route path="/books"><Books /></Route>
-            <Route path="/login"><Login /></Route>
-            <Route path="/signup"><Signup /></Route>
-            <Route path="/blog"><Blog /></Route>
             <Route path="/movies"><Movies /></Route>
             <Route path="/video"><Video /></Route>
             <Route path="/railsapi"><RailsAPI /></Route>
