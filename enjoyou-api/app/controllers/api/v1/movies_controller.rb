@@ -1,6 +1,7 @@
 class Api::V1::MoviesController < ApplicationController
+
     def index
-        movies = Note.all
+        movies = Movie.all
         render json: movies, status: 200
     end 
 

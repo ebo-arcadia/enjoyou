@@ -13,6 +13,15 @@ export class SearchMovieForm extends Component {
         this.props.loadAndFetchMovies(this.props.text);
     }
 
+    // create new movies in rails api with movies data from react fetch 
+    // let response = await fetch('http://localhost:5000/notes', {  
+    //     method: 'POST',  
+    //     headers: {    
+    //         Accept: 'application/json',    
+    //         'Content-Type': 'application/json',  
+    //     },  
+    //     body: JSON.stringify({movies}),});
+
     render() {
         return (
                 <div className="jumbotron jumbotron-fluid mt-5 text-center">
