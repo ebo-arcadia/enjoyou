@@ -1,13 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const About = () => {
-    return (
-        <div>
-            <h1>About this project...</h1>
-            <h2>Add contact info</h2>
-            <h2>footer goes here or using imported react component?</h2>
-        </div>
-    );
+class About extends Component {
+    state = {
+        movies: []
+    };
+
+    componentDidMount() {
+        fetch('http://localhost:3001/api/v1/movies')
+        .then(resp => resp.json())
+        .then(movieData => {
+            this.setState({movies: movieData})
+        });
+    };
+
+    renderAllMovies = () => {
+        return(
+            <ul>
+                {this.state.movies.map(movie => (
+                    <li key={movie.imdbID}>{movie.title}</li>
+                ))}
+            </ul>
+        )
+    }
+
+    render() {
+        return (
+            <div>{this.renderAllMovies()}</div>
+        )
+    }
+
 }
 
 export default About;
