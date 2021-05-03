@@ -4,7 +4,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :year
       t.string :imdbID
-      t.poster :string
+      t.string :poster
       t.timestamps
     end
   end
