@@ -10,8 +10,9 @@ class RailsAPI extends Component {
         .then(resp => resp.json())
         .then(movieData => {
             this.setState({movies: movieData})
-        });
-    };
+        })
+        .catch(error => alert(error.message));
+    }
 
     renderAllMovies = () => {
         return(

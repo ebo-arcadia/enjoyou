@@ -6,7 +6,7 @@ class Api::V1::MoviesController < ApplicationController
     end 
 
     def create
-        movie = Movie.find(params[:imdbID])
+        movie = Movie.create(movie_params)
         render json: movie, status: 200
     end 
 
