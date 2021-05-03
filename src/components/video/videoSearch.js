@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import VideoList from '../components/VideoList'
-import '../style/video.css'
+import VideoList from './videoList'
+import '../../style/video.css'
 
 
 const VideoSearch = () => {   
@@ -33,7 +33,7 @@ const VideoSearch = () => {
     return (
         <div className="video-container" >
             <h1>
-                What visual experience you want to have today?
+                What to watch?
             </h1>
             <form onSubmit={search}>
                 <input 

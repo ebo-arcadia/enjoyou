@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeHeader from './HomeHeader'
+import HomeHeader from './homeHeader'
 
 const Home = () => {
     return (

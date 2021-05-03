@@ -1,10 +1,10 @@
 import React from 'react';
-import "../style/book.css";
+import "../../style/book.css";
 import { InputGroup, FormControl, FormGroup, FormLabel, Form, Col, Button, Spinner } from 'react-bootstrap'
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import BookCard from './BookCard'
+import BookCard from './bookCard'
 
 const BookHeader = () => {
 

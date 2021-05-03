@@ -1,6 +1,5 @@
 import React from 'react';
-// import { Card, CardImg, Container, Row, Col } from 'react-bootstrap';
-import '../style/video.css'
+import '../../style/video.css'
 
 const VideoCard = ({video}) => {
     console.log(video)

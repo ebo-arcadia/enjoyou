@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import VideoCard from './VideoCard';
+import VideoCard from './videoCard';
 
 class VideoList extends Component {
 
