@@ -1,12 +1,11 @@
 import React from 'react';
+import VideoSearch from './VideoSearch';
 
-const Video = () => {
+const Video = () => {   
     return (
-        <div>
-            <h2>Your Favorite video rendered here</h2>
-            <p>Using Youtube API with a imported React search component? </p>
+        <div className="video-search">
+            <VideoSearch />
         </div>
-    );
+    )
 }
-
-export default Video;
+export default Video

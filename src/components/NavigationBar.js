@@ -15,7 +15,7 @@ const NavigationBar = () => {
             <Nav.Link href="login">Login</Nav.Link>
             <Nav.Link href="signup">Signup</Nav.Link>
             <Nav.Link href="blog">Blog</Nav.Link>
-            <Nav.Link href="projects">Projects</Nav.Link>
+            <Nav.Link href="movies">Movies</Nav.Link>
             <Nav.Link href="video">Video</Nav.Link>
             <Nav.Link href="about">About</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">

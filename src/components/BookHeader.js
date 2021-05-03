@@ -1,5 +1,5 @@
 import React from 'react';
-import "../book.css";
+import "../style/book.css";
 import { InputGroup, FormControl, FormGroup, FormLabel, Form, Col, Button, Spinner } from 'react-bootstrap'
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
@@ -28,13 +28,12 @@ const BookHeader = () => {
                     if (booksData.items.length > 0) {
                         setCards(booksData.items)
                         setLoading(false)
-                        // console.log(cards)
                     }
                 }
             })
             .catch(error => {
                 setLoading(true)
-                toast.error("qury can't be empty")
+                toast.error("Query can't be empty")
             });
         }
     }
