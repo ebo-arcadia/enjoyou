@@ -17,8 +17,8 @@ const NavigationBar = () => {
             <Nav.Link href="blog">Blog</Nav.Link>
             <Nav.Link href="movies">Movies</Nav.Link>
             <Nav.Link href="video">Video</Nav.Link>
-            <Nav.Link href="about">About</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <Nav.Link href="railsapi">RailsAPI</Nav.Link>
+            <NavDropdown title="From Rails" id="basic-nav-dropdown">
               <NavDropdown.Item href="/">Home</NavDropdown.Item>
               <NavDropdown.Item href="books">Books</NavDropdown.Item>
               <NavDropdown.Item href="login">Login</NavDropdown.Item>

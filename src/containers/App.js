@@ -9,7 +9,7 @@ import Signup from '../containers/Signup';
 import Blog from '../containers/Blog';
 import Movies from '../containers/Movies';
 import Video from '../containers/Video';
-import About from '../components/About'
+import RailsAPI from './RailsAPI'
 import NavigationBar from '../components/NavigationBar';
 
 export default function App() {
@@ -28,7 +28,7 @@ export default function App() {
             <Route path="/blog"><Blog /></Route>
             <Route path="/movies"><Movies /></Route>
             <Route path="/video"><Video /></Route>
-            <Route path="/about"><About /></Route>
+            <Route path="/railsapi"><RailsAPI /></Route>
             <Route exact path="/"><Home /></Route>
           </Switch>
         </div>

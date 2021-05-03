@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class About extends Component {
+class RailsAPI extends Component {
     state = {
         movies: []
     };
@@ -31,4 +31,4 @@ class About extends Component {
 
 }
 
-export default About;
+export default RailsAPI;
