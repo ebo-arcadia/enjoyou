@@ -6,14 +6,13 @@ class Api::V1::MoviesController < ApplicationController
     end 
 
     def create
-        movie = Movie.create(movie_params)
-        render json: movie, status: 200
+        params[:movie][:movieData].each do |m|
+            @movies = Movie.create(title: m[:Title], year: m[:Year], imdbID: m[:imdbID], poster: m[:Poster])
+        end
+        render json: @movies, status: 200
     end 
-
-    private
 
     def movie_params
         params.require(:movie).permit(:title, :year, :imdbID, :poster)
     end 
-
 end

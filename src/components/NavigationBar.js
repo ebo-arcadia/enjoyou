@@ -14,14 +14,14 @@ const NavigationBar = () => {
             <Nav.Link href="books">Books</Nav.Link>
             <Nav.Link href="movies">Movies</Nav.Link>
             <Nav.Link href="video">Video</Nav.Link>
-            <Nav.Link href="railsapi">RailsAPI</Nav.Link>
-            <NavDropdown title="From Rails" id="basic-nav-dropdown">
+            <Nav.Link href="saved">Saved</Nav.Link>
+            <NavDropdown title="more" id="basic-nav-dropdown">
               <NavDropdown.Item href="/">Home</NavDropdown.Item>
               <NavDropdown.Item href="books">Books</NavDropdown.Item>
               <NavDropdown.Item href="video">Video</NavDropdown.Item>
               <NavDropdown.Item href="movies">Movies</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="about">Rails API</NavDropdown.Item>
+              <NavDropdown.Item href="more">More</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
