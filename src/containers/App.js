@@ -6,7 +6,7 @@ import Home from '../components/Home';
 import Books from './books';
 import Movies from './movies';
 import Video from './video';
-import Saved from './saved'
+import Library from './library'
 import NavigationBar from '../components/NavigationBar';
 
 export default function App() {
@@ -22,7 +22,7 @@ export default function App() {
             <Route path="/books"><Books /></Route>
             <Route path="/movies"><Movies /></Route>
             <Route path="/video"><Video /></Route>
-            <Route path="/saved"><Saved /></Route>
+            <Route path="/library"><Library /></Route>
             <Route exact path="/"><Home /></Route>
           </Switch>
         </div>
