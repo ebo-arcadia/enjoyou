@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { Table, Button, Card } from 'react-bootstrap';
 
 class RailsAPI extends Component {
     state = {
@@ -17,12 +18,20 @@ class RailsAPI extends Component {
 
     renderAllMovies = () => {
         return(
-            <ul>
-                <h1>Movies from your Rails API</h1>
+            <Fragment>
+                <h1>Movies from your library</h1>
                 {this.state.movies.map(movie => (
-                    <li key={movie.imdbID}>{movie.title}</li>
-                ))}
-            </ul>
+                    <Card border="primary" style={{ width: '18rem' }}>
+                        <Card.Header>{movie.title}</Card.Header>
+                        <Card.Body>
+                        <Card.Title>Year: {movie.year}</Card.Title>
+                        <Card.Text>
+                            <Button className="secondary" href={'https://www.imdb.com/title/' + movie.imdbID} target="_blank" rel="noreferrer">Movie Details</Button>
+                        </Card.Text>
+                        </Card.Body>
+                    </Card>
+                ))};
+            </Fragment>
         )
     }
 
