@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Table, Button, Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 
 class RailsAPI extends Component {
     state = {
