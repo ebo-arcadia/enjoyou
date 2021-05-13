@@ -2,7 +2,7 @@ import React from "react";
 import '../style/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from '../components/home';
+import Home from '../components/Home';
 import Books from './books';
 import Movies from './movies';
 import Video from './video';
